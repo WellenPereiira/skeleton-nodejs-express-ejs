@@ -20,7 +20,7 @@ router.get('/deletar', async function(req, res, next){
   res.json(autores.rows);
 });
 
-router.get('/inserir', async function(req, res, next){
+router.post('/inserir', async function(req, res, next){
   const autor = {nome:"Cirilo", sobrenome:"Pereira", data_de_nascimento:"1967/06/03"}
   const autores = await Autor.inserir(autor);
   res.json(autores.rows);
